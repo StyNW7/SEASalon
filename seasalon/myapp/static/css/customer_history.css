@@ -1,0 +1,124 @@
+:root {
+    --white: #fefefe;
+	--secondary-white: #dfdfdf;
+    --black: #040D12;
+	--gray: #36454f;
+    --yellow: #ffdb56;
+	--primary-black: #1d1f1f;
+	--red: #FF5055;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--red);
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1f1f;
+    margin: 45px 25px;
+    padding: 0;
+}
+
+#center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h1 span {
+    color: var(--red);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.reservations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.reservation-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.reservation-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.viewall {
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.btn {
+	font-size: 1.35em;
+	color: #000;
+	text-decoration: none;
+	letter-spacing: 3px;
+	background: #FF5055;
+	display: inline-block;
+	padding: 12px 40px;
+	margin-top: 20px;
+	border: solid 3px white;
+	transition-duration: 500ms;
+	font-weight: 550;
+}
+
+.btn:hover {
+	letter-spacing: 5px;
+	background: var(--yellow);
+	box-shadow: 0 0 5px var(--yellow), 0 0 10px var(--yellow), 0 0 10px var(--yellow);
+	transform: translateY(-3px);
+}
+
+@media (max-width: 1080px) {
+
+	.btn {
+		padding: 12px 25px;
+		letter-spacing: 4px;
+		font-size: 17px;
+	}
+
+}

@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+    <title>SEA Salon - Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div id="center-container">
+        <div class="container" id="register-container">
+            <h2>SEA Salon</h2>
+            <h5>Register Section</h5>
+
+            <a href="{% url 'login' %}" id="linktologin">Already have an account? <span>Login here!</span> </a>
+
+            {% if form.errors %}
+                <p>Please correct the errors below.</p>
+            {% endif %}
+
+            <form method="POST">
+                {% csrf_token %}
+                
+                <label for="username">Username</label>
+                {{ form.username }}
+
+                <label for="email">Email</label>
+                {{ form.email }}
+
+                <label for="full_name">Full Name</label>
+                {{ form.full_name }}
+
+                <label for="phone_number">Phone Number</label>
+                {{ form.phone_number }}
+
+                <label for="password1">Password</label>
+                {{ form.password1 }}
+
+                <label for="password2">Confirm Password</label>
+                {{ form.password2 }}
+
+                <input type="hidden" name="role" value="customer">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+
+    <div class="viewall">
+        <a href="../" class="btn">Home</a>
+    </div>
+
+</body>
+</html>

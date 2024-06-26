@@ -1,0 +1,40 @@
+{% load static %}
+{% load custom_filters %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Checkers</title>
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customer Reviews</h1>
+        </header>
+
+        <div class="reviews">
+            <ul>
+                {% for review in reviews %}
+                <li>
+                    <div class="review">
+                        <h3><span>Name: </span>{{ review.customer_name }}</h3>
+                        <h4><span>Rating: </span><span class="rating {{ review.star_rating|get_rating_color }}">{{ review.star_rating }} stars</span></h4>
+                        <p><span>Comment: </span>{{ review.comment }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="back-btn">
+            <a href="{% url 'page' %}" class="btn">Dashboard</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

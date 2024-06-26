@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div id="center-container">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+
+            <!-- Branches Section -->
+            <fieldset>
+                <legend>Branches</legend>
+                <ul>
+                    {% for branch in branches %}
+                    <li>{{ branch.name }} - {{ branch.location }} ({{ branch.opening_time }} - {{ branch.closing_time }})</li>
+                    {% endfor %}
+                </ul>
+            </fieldset>
+
+            <!-- Add New Branch Section -->
+            <fieldset>
+                <legend>Add New Branch</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ branch_form.as_p }}
+                    <button type="submit" class="btn" name="branch_form">Add Branch</button>
+                </form>
+            </fieldset>
+
+            <!-- Services Section -->
+            <fieldset>
+                <legend>Services</legend>
+                <ul>
+                    {% for service in services %}
+                    <li>{{ service.name }} - {{ service.duration }} (Branch: {{ service.branch.name }})</li>
+                    {% endfor %}
+                </ul>
+            </fieldset>
+
+            <!-- Add New Service Section -->
+            <fieldset>
+                <legend>Add New Service</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ service_form.as_p }}
+                    <button type="submit" class="btn" name="service_form">Add Service</button>
+                </form>
+            </fieldset>
+
+            <!-- Home Link -->
+            <div class="viewall">
+                <a href="{% url 'page' %}" class="btn">Dashboard</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

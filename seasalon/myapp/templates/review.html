@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Salon App</title>
+    <link rel="stylesheet" href="{% static 'css/review.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Sea Salon App</h1>
+        <p>Welcome to Sea Salon! Leave your review below:</p>
+    </header>
+
+    <main>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="review-list">
+                <!-- Review items will be added dynamically here -->
+            </div>
+        </section>
+
+        <section id="add-review">
+            <h2>Add Your Review</h2>
+            <form id="review-form">
+                <div>
+                    <label for="customer-name">Your Name:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div>
+                    <label for="star-rating">Star Rating:</label>
+                    <select id="star-rating" required>
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sea Salon App</p>
+    </footer>
+
+    <script src="{% static 'js/review.js' %}"></script>
+
+</body>
+</html>

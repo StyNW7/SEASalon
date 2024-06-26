@@ -1,0 +1,358 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Salon</title>
+
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/header-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- local plugin -->
+
+    <link rel="stylesheet" href="{% static 'plugin/fontawesome-free-5.15.1-web/css/all.min.css' %}">
+
+</head>
+<body>
+    
+    <!-- Header Start -->
+
+    <header>
+
+        <a href="#" class="logo">
+            <img src="{%  static 'Images/Stuff/horizontal-logo-nobg.png' %}" alt="">
+        </a>
+
+        <div class="menuToggle" onclick="menu()"></div>
+
+        <ul class="navigation">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#topTier">Services</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="login/">Account</a></li>
+
+        </ul>
+
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Home Start -->
+
+    <section id="home">
+
+        <div class="content">
+            <h2 id="home-title">
+                <span>SEA</span> Salon
+            </h2>
+            <h3>
+                “Beauty and Elegance Redefined”
+            </h3>
+            <!-- <br/> -->
+            <p>
+                Join our community and never miss out anything here!
+            </p>
+            <br/>
+            <a href="login/" title="Enjoy Explore!" class="btn" id="welcome">Get Started!</a>
+       </div>
+    
+    </section>
+
+    <!-- Home End -->
+
+    <!--About-->
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="col50">
+                <h2 class="titleText"><span>SEA</span> Salon</h2>
+                <p>
+                    SEA Salon is a leading beauty salon committed to providing the best service for our customers. With branches spread across various locations, SEA Salon offers a variety of beauty services which include:
+                    <br><br>
+                    <ul>
+                        <li>
+                            Hair Cuts and Styles: Get the latest hair looks from our professional hair stylists.
+                        </li>
+                        <li>
+                            Manicure and Pedicure: Complete nail care to keep your hands and feet looking perfect.
+                        </li>
+                        <li>
+                            Facial Treatments: Pamper yourself with various facial treatments for healthy and glowing skin.
+                        </li>
+                    </ul>
+                </p>
+
+                <br>
+
+                <p id="quote">“Beauty and Elegance Redefined”</p>
+
+            </div>
+
+            <div class="col50">
+                <div class="imgBx">
+                    <img id="slider" src="{%  static 'Images/Stuff/images1.jpg' %}" alt="My Photos"/>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Facility Section -->
+
+    <section id="facility">
+
+        <div class="services_box">
+
+            <div class="services_card">
+                <i class="fas fa-coins"></i>
+                <h3>Low Price</h3>
+                <p>
+                    We offer the best price
+                    <br>
+                    for high quality
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fas fa-crown"></i>
+                <h3>Customer is King</h3>
+                <p>
+                    We serve customer
+                    <br>
+                    as best as we can!
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fas fa-id-card"></i>
+                <h3>Clean & Tidy</h3>
+                <p>
+                    We provide best quality
+                    <br>
+                    clean and tidy is a must!
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="topTier">
+
+        <div class="title">
+            <h2 class="titleText">
+            <span>SEA</span> Salon Services
+            </h2>
+            <p>
+                Our 3 Main Services at SEA Salon
+            </p>
+        </div>
+
+        <div class="content">
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{%  static 'Images/Stuff/haircut.jpeg' %}" alt="#">
+                </div>
+                <div class="text">
+                    <h3>Haircut and Styling</h3>
+                    Start From $15
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{%  static 'Images/Stuff/madicure.webp' %}" alt="#">
+                </div>
+                <div class="text">
+                    <h3>Manicure and Pedicure</h3>
+                    Start From $20
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{%  static 'Images/Stuff/facial.jpg' %}" alt="#">
+                </div>
+                <div class="text">
+                    <h3>Facial Treatments</h3>
+                    Start From $25
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="viewall">
+            <a href="#topTier" class="btn">View Details</a>
+        </div>
+
+    </section>
+
+    <!-- Featured -->
+
+    <section id="featured">
+        
+        <div class="title">
+            <h2 class="titleText">
+                <span>SEA</span> Salon Gallery
+            </h2>
+            <p>
+                Checkout our amazing photos
+            </p>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <div class="container">
+                <div class="image">
+                    <img src="{%  static 'Images/Stuff/carousel1.jpg' %}" alt="">
+                </div>
+                <div class="image">
+                    <img src="{%  static 'Images/Stuff/carousel2.jpg' %}" alt="">
+                </div>
+                <div class="image">
+                    <img src="{%  static 'Images/Stuff/carousel3.jpg' %}" alt="">
+                </div>
+                <div class="image">
+                    <img src="{%  static 'Images/Stuff/carousel4.png' %}" alt="">
+                </div>
+                <div class="image">
+                    <img src="{%  static 'Images/Stuff/carousel5.webp' %}" alt="">
+                </div>
+        
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+    
+            </div>    
+        </div>
+
+    </section>
+
+    <!-- Be Our Community -->
+
+    <section id="community">
+
+        <div class="row">
+
+            <div class="col50" id="customer1">
+                <div class="imgBx">
+                    <img id="slider" src="{%  static 'Images/Stuff/images2.jpg' %}" alt="My Photos"/>
+                </div>
+            </div>
+
+            <div class="col50">
+                <h2 class="titleText"><span>B</span>e <span>O</span>ur <span>C</span>ommunity</h2>
+                <p>
+                    At SEA Salon, we believe that everyone deserves to feel beautiful and confident. That's why we offer a wide range of top-quality beauty services designed to meet your unique needs. Whether you're looking for a stylish haircut, a relaxing manicure, or a rejuvenating facial treatment, our expert team is here to provide you with an exceptional experience.
+                </p>
+
+                <br>
+
+                <p id="quote">“Beauty and Elegance Redefined”</p>
+
+                <div>
+                    <a href="login/" class="btn">Create Account</a>
+                </div>
+
+            </div>
+
+            <!-- Responsive -->
+
+            <div class="col50" id="customer2">
+                <div class="imgBx">
+                    <img id="slider" src="{%  static 'Images/Stuff/images2.jpg' %}" alt="My Photos"/>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Footer-->
+
+    <footer>
+        
+        <div class="footer_main">
+
+            <div class="tag">
+                <img src="{%  static 'Images/Stuff/horizontal-logo-nobg.png' %}">
+                <p>
+                    Our expert team is here to provide you with an exceptional experience. So let's cut at SEA Salon for the best haircut and any other services!
+                </p>
+
+            </div>
+
+            <div class="tag">
+                <h1>Navigation</h1>
+                <ul>
+                    <a href="#home"><i class="fas fa-home"></i>Home</a>
+                    <a href="#about"><i class="far fa-address-card"></i>About</a>
+                    <a href="#topTier"><i class="fas fa-book-open"></i>Services</a>
+                    <a href="#community"><i class="far fa-newspaper"></i>Community</a>
+                    <a href="login/"><i class="far fa-user-circle"></i>Account</a>
+                </ul>
+            </div>
+
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fas fa-phone"></i>Thomas: 08123456789</a>
+                <a href="#"><i class="fas fa-phone"></i>Sekar: 08164829372</a>
+                <a href="#"><i class="far fa-envelope"></i>seasalon@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follow Us</h1>
+                <div class="social_link">
+                    <a href="#" ><i class="fab fa-facebook-f social-icon"></i>&nbsp;&nbsp;Facebook</a>
+                    <a href="#" ><i class="fab fa-instagram social-icon"></i> Instagram</a>
+                    <a href="#" ><i class="fab fa-twitter social-icon"></i>Twitter</a>
+                    <a href="#" ><i class="fab fa-linkedin-in social-icon"></i> Linkedin</a>
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Subscribe</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="email@gmail.com">
+                    <button type="submit" id="subscribe">Subscribe</button>
+                </div>                
+            </div>    
+            
+        </div>
+
+        <p class="end">
+            <a href="#home">&copy; 2024 SEA Salon</a>
+        </p>        
+
+    </footer>
+
+	<a href="#" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+	</a>
+
+    <script src="{% static 'js/header-footer.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

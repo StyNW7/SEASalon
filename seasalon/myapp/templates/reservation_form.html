@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/reservation_form.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="center-container">
+        <div class="container">
+            <h1>Make Reservation</h1>
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="message {% if message.tags %} {{ message.tags }} {% endif %}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <form method="post" class="reservation-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_branch">Branch:</label>
+                    {{ form.branch }}
+                </div>
+                <div class="form-group">
+                    <label for="id_service">Service:</label>
+                    {{ form.service }}
+                </div>
+                <div class="form-group">
+                    <label for="id_reservation_time">Reservation Time:</label>
+                    {{ form.reservation_time }}
+                </div>
+                <button type="submit" class="btn">Submit Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="viewall">
+        <a href="{% url 'customer_page' %}" class="btn">Dashboard</a>
+        <a href="{% url 'customer_history' %}" class="btn">Check History</a>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#id_branch").change(function() {
+                var url = "{% url 'ajax_load_services' %}";  // get the url of the `load_services` view
+                var branchId = $(this).val();  // get the selected branch ID from the HTML input
+
+                $.ajax({
+                    url: url,
+                    data: {
+                        'branch_id': branchId  // add the branch id to the GET parameters
+                    },
+                    success: function(data) {
+                        $("#id_service").html("");  // clear the service select box
+                        $.each(data, function(key, value) {
+                            $("#id_service").append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

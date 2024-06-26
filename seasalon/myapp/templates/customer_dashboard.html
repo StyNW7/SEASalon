@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/customer_history.css' %}">
+</head>
+<body>
+    <div id="center-container">
+        <div class="container">
+            <h1>Welcome, <span>{{ user.username }}</span></h1>
+            <h2>Your Reservations</h2>
+            <ul class="reservations-list">
+                {% for reservation in reservations %}
+                    <li class="reservation-item">
+                        <div class="reservation-details">
+                            <h3>Service: {{ reservation.service.name }}</h3>
+                            <p>Branch: {{ reservation.branch.name }}</p>
+                            <p>Date: {{ reservation.reservation_time }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="viewall">
+        <a href="{% url 'customer_page' %}" class="btn">Dashboard</a>
+    </div>
+
+</body>
+</html>

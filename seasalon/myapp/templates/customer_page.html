@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+
+    <link rel="shortcut icon" href="{%  static 'Images/Stuff/logo-nobg.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/role_page.css' %}">
+
+</head>
+<body>
+
+    <section id="topTier">
+
+        <div class="title">
+            <h2 class="titleText">
+            <span>Customer</span> Dashboard
+            </h2>
+            <p>
+                Reserve, Review, History
+            </p>
+        </div>
+
+        <div class="content">
+
+            <a href="../../reserve/">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{%  static 'Images/Stuff/reservation.webp' %}" alt="#">
+                    </div>
+                    <div class="text">
+                        <h3>Reserve</h3>
+                        Make a reservation at SEA Salon
+                    </div>
+                </div>
+            </a>
+
+            <a href="../../customer/review/">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{%  static 'Images/Stuff/review.jpg' %}" alt="#">
+                    </div>
+                    <div class="text">
+                        <h3>Review</h3>
+                        Your review is very useful for us!
+                    </div>
+                </div>
+            </a>
+
+            <a href="../history/">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="{%  static 'Images/Stuff/history.webp' %}" alt="#">
+                    </div>
+                    <div class="text">
+                        <h3>Customer's History</h3>
+                        Customer Past Reservations
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <br>
+
+        <div class="viewall">
+            <a href="{% url 'logout' %}" class="btn">Logout</a>
+        </div>
+
+    </section>
+
+	<a href="#" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+	</a>
+
+    <script src="{% static 'js/role_page.js' %}"></script>
+
+</body>
+</html>
