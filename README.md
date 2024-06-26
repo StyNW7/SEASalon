@@ -39,6 +39,12 @@ Details:
 - Database: Database SQlite
 - Front-end: HTML, CSS, JavaScript, and  jQuery
 
+## Prerequisite
+
+1. Python 3.x has been installed in your system.
+2. Pip (package manager for Python) has been installed in your system.
+3. Git has been installed in your system (If you prefer to use Git)
+
 ## How to Use Website
 
 This website is not 
