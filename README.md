@@ -47,23 +47,77 @@ Details:
 
 ## How to Use Website
 
-This website is not 
+#### *This website is not deployed*
+
+Therefore, this is the guidelines to use the website
+
+### Step 1: Download Repository (Local / Fork Repository)
+
+Users can download this repository locally or fork / copy this repository to their personal repository
 <br> <br>
-Karena itu, berikut langkah secara sederhana saja terkait cara penggunaan Web kami:
+Meanwhile, if the user wants to clone the repository via URL, the user can use the following URL:
 
-### Langkah 1: Download Repository (Local / Fork Repository)
+<code> https://github.com/StyNW7/SEASalon.git </code>
 
-User dapat download repository ini secara lokal maupun forking / copy Repostiory ini ke Repository pribadi
-<br> <br>
-Adapun, jika user ingin clone repository melalui url, user dapat menggunakan url berikut ini:
+#### User can also Clone this repository (Remember the main branch is: master not main)
 
-<code> https://github.com/Visella/Sikat.git </code>
+<code> git clone https://github.com/StyNW7/SEASalon.git </code>
 
-### Langkah 2: File index.html
+### Step 2: Virtual Environment (Optional)
 
-Langkah terakhir adalah bahwa file utama daripada Website kami ini adalah file yang memiliki nama "index.html" dan berada pada directory terluar pada Repository ini.
-<br> <br>
-Sehingga, jika ingin menjalankan secara local, pastikan bahwa file index.html yang terbuka pada local host yang dijalankan
+If you prefer to use Virtual Environment, You can use this step to create a Virtual Environment:
+
+<code> python -m venv env </code>
+
+To activate and use the Virtual Environment on Windows
+
+<code> .\env\Scripts\activate </code>
+
+To activate and use the Virtual Environment on MacOS / Linux
+
+<code> source env/bin/activate </code>
+
+However, this repository is also offer a Virtual Environment Folder (just in case you don't download the Virtual Environment Folder)
+
+### Step 3: Install Dependencies
+
+This step is crucial to use the website. Firstly, You should install all of dependencies used in this Website
+
+Run this code in the terminal
+
+<code> pip install -r requirements.txt </code>
+
+### Step 4: Move to the main Folder (seasalon)
+
+When you have download or clone the repository, you should cd to the main folder which is seasalon
+
+Use this at Terminal:
+
+<code> cd seasalon </code>
+
+### Step 5: Database Setup (Optional)
+
+I already provide the database, however if there is any changes You want to change, you should run this code
+
+Just run this code (run in the terminal):
+
+<code> python manage.py makemigrations </code>
+<br>
+<code> python manage.py migrate </code>
+
+### Step 6: Run the Server
+
+If you have already follow the step given above, the server can be run using this (run in the terminal):
+
+<code> python manage.py runserver </code>
+
+After that, the server is starting to run and You can click the localhost server like this:
+
+<code> Starting development server at http://127.0.0.1:8000/ </code>
+
+Or you can also open your browser and type <code> http://127.0.0.1:8000/ </code> manually
+
+However, if you are using different localhost server, you can go to your own localhost server port
 
 <!-- Translation -->
 
