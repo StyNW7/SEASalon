@@ -77,21 +77,21 @@ To activate and use the Virtual Environment on MacOS / Linux
 
 However, this repository is also offer a Virtual Environment Folder (just in case you don't download the Virtual Environment Folder)
 
-### Step 3: Install Dependencies
-
-This step is crucial to use the website. Firstly, You should install all of dependencies used in this Website
-
-Run this code in the terminal
-
-<code> pip install -r requirements.txt </code>
-
-### Step 4: Move to the main Folder (seasalon)
+### Step 3: Move to the main Folder (seasalon)
 
 When you have download or clone the repository, you should cd to the main folder which is seasalon
 
 Use this at Terminal:
 
 <code> cd seasalon </code>
+
+### Step 4: Install Dependencies
+
+This step is crucial to use the website. Firstly, You should install all of dependencies used in this Website
+
+Run this code in the terminal
+
+<code> pip install -r requirements.txt </code>
 
 ### Step 5: Database Setup (Optional)
 
