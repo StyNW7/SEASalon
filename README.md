@@ -3,13 +3,11 @@
 This repository created for a selection at Software Engineering Academy by Compfest Academy 2024 🔥🔥
 
 ## Table of Contents
-1. [Gambaran Besar](https://github.com/Visella/Sikat#Gambaran-Besar)
-2. [Ide Hackathon](https://github.com/Visella/Sikat#Ide-Hackathon)
-3. [Cara Penggunaan Web](https://github.com/Visella/Sikat#Cara-Penggunaan-Web)
-4. [Penjelasan dan Tampilan Web](https://github.com/Visella/Sikat#Penjelasan-dan-Tampilan-Web)
-5. [Demo Video](https://github.com/Visella/Sikat#Video-Presentasi)
-6. [Translation](https://github.com/Visella/Sikat#Translation)
-7. [Detail Tim](https://github.com/Visella/Sikat#Detail-Tim)
+1. [Project Overview](https://github.com/StyNW7/SEASalon#Project-Overview)
+2. [Prerequisite](https://github.com/StyNW7/SEASalon#Prerequisite)
+3. [How to Use Website](https://github.com/StyNW7/SEASalon#How-to-Use-Website)
+4. [Website Information](https://github.com/StyNW7/SEASalon#Website-Information)
+5. [Owner](https://github.com/StyNW7/SEASalon#Owner)
 
 ## Project Overview
 
@@ -119,13 +117,58 @@ Or you can also open your browser and type <code> http://127.0.0.1:8000/ </code>
 
 However, if you are using different localhost server, you can go to your own localhost server port
 
+
+<!-- Other Guide -->
+
+## Website Information
+
+### Register and Login
+
+User can register a new account, however user can only make a new Customer Account
+
+And then user can login using the existing account
+
+### Creating Admin User
+
+If You want to create a new Admin user, you must follow this step:
+
+Run this on Terminal:
+
+<code> python manage.py create_custom_user </code>
+
+Just input the data and make sure that the username and any other fields is unique from other data in the Database
+
+After Creating Custom User succeed, You can login on the Website using the username and passsword you make and that user surely have an Admin role.
+
+### Account example
+
+If you want to testing the customer and admin role, you can just use this Account:
+
+#### Customer Role
+
+username: customer1
+<br>
+password: Customer123
+
+#### Admin Role
+
+username: thomas
+<br>
+password: Admin123
+
+##### Hope this documentation and the guide useful and helpful to use the website!
+
 <!-- Translation -->
+
+<!--
 
 ## Translation
 
 I also provide Documentation Translation in Indonesian right here:
 
 <a href="Translation/Indonesia.md"> Indonesian Translation </a>
+
+-->
 
 <!-- Owner -->
 
