@@ -164,15 +164,11 @@ password: Admin123
 
 <!-- Translation -->
 
-<!--
-
 ## Translation
 
 I also provide Documentation Translation in Indonesian right here:
 
-<a href="Translation/Indonesia.md"> Indonesian Translation </a>
-
--->
+<a href="Translation/INDONESIAN.md"> Indonesian Translation </a>
 
 <!-- Owner -->
 
