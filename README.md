@@ -2,6 +2,10 @@
 
 This repository created for a selection at Software Engineering Academy by Compfest Academy 2024 🔥🔥
 
+The project is already deployed on pythonanywhere, so you can see the website by clicking this URL:
+
+<a href="https://xstynwx.pythonanywhere.com/">https://xstynwx.pythonanywhere.com/</a>
+
 ## Table of Contents
 1. [Project Overview](https://github.com/StyNW7/SEASalon#Project-Overview)
 2. [Prerequisite](https://github.com/StyNW7/SEASalon#Prerequisite)
