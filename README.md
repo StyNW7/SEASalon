@@ -49,7 +49,7 @@ Details:
 
 ## How to Use Website
 
-#### *This website is not deployed*
+<!-- #### *This website is not deployed* -->
 
 Therefore, this is the guidelines to use the website
 
